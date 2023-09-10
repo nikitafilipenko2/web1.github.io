@@ -1,45 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Task 1</title>
+    <meta charset="utf-8" />
+    <title>Nikita Filipenko Web1</title>
 </head>
 <body>
+    <h1 id="task1">Главная страница</h1>
+    <p>Список ссылок:</p>
     <ul>
-        <li><a href="https://www.kubsu.ru/ru">Link 1</a></li>
-        <li><a href="http://www.kubsu.ru/ru">Link 2</a></li>
+        <li><a href="http://kubsu.ru/">Абсолютная гиперссылку на главную страницу сайта КубГУ(1)</a></li>
+        <li><a href="https://kubsu.ru/"> Абсолютная на главную сайта КубГУ в протоколе https(2)</a></li>
         <li><a href="https://www.kubsu.ru/ru"><img src="image.jpg" width="400" height="200" alt="flower"></a></li>
-        <li><a href="/demo.html">Link 4</a></li>
-        <!-- (li>a)*19 -->
-    </ul>
+        <li>
+            <p>Список ссылок навигации сайта(6,20)</p>
+            <nav>
+                <ol>
+                    <li><a href="#task1" title="task">Ссылки</a></li>
+                    <li><a href="#form" title="form">Форма</a></li>
+                </ol>
+            </nav>
+            <br>
+        </li>
+        <li> <p><a href="/first">Страница номер два</a>  ссылка сокращенная(4)</p></li>
+        
+        <li><a href="/">Сокращенная ссылка на главную(5)</a></li>
+
+
+        <li><a href="https://www.youtube.com/watch?v=XIMLoLxmTDw&ab_channel=CandRfun&t=1000" target="_blank"> Ссылка с тремя параметрами в URL(7)</a></li>
+        <li> <a href="#down">Вниз страницы (ссылка с параметром id)(8)</a> </li>
+        <li><a href="about/about.html">Относительная ссылка на старницу в каталоге about(9)</a></li>
+        <li><a href="about/nextnext/third.html">Ссылка на страницу на 2 уровня ниже</a></li>
+
+        <li><a>Ссылка без href(16)</a></li>
+        <li><a href="">Ссылка с пустым href(17)</a></li>
+        <li><a href="http://example.com" rel="nofollow"> Ссылка, по которой запрещен переход поисковикам(18)</a></li>
+        <li><a href="http://example.com" rel="noindex">Запрещенная для индексации поисковиками(19)</a></li>
+
+        <li><a href="ftp://test:password@private.public.example.com/directory/file.txt">Ссылка на файл на сервере FTP савторизацией(21)</a></li>
+
+</ul>
+    <map name="map0">
+        <area shape="rect" coords="338,178, 682,364 " href="https://www.yaklass.ru/p/geometria/8-klass/chetyrekhugolniki-9229/priamougolnik-kvadrat-priznaki-priamougolnika-i-kvadrata-romb-9231/re-80c176ad-8feb-4e92-8bd2-584665a37158" alt="прямоуголник ">
+        <area shape="circle" coords="984,282, 981,191 " href="https://cyclowiki.org/wiki/%D0%9A%D1%80%D1%83%D0%B3_(%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F)" alt="круг ">
+        <area shape="poly" coords="703,466, 567,621, 847,720 " href="https://microexcel.ru/treugolnik-figura/" alt="треугольник">
+    </map>
+    <h1 id="form">Форма</h1>
     <form action="" method="POST">
-        <p><input type="text" id="FIO" placeholder="FIO"></p>
-        <p><input type="tel" id="telephone" placeholder="telephone"></p>
-        <p><input type="email" id="email" placeholder="email"></p>
-        <p><input type="date" id="birthday" placeholder="birthday"></p>
-        <div>Male</div><input type="radio" id="sex-m">
-        <div>Female</div><input type="radio" id="sex-f">
-        <p>
-            Favourite programming language: <select>
-                <option value="">Java</option>
-                <option value="">C++</option>
-                <option value="">Pascal</option>
-                <option value="">C#</option>
-                <option value="">JavaScript</option>
-                <option value="">PHP</option>
-                <option value="">Python</option>
-                <option value="">Haskel</option>
-                <option value="">Clojure</option>
-                <option value="">Prolog</option>
-                <option value="">Scala</option>
-            </select>
-        </p>
-        <textarea name="Biography" rows="12" cols="30" placeholder="Biography"></textarea>
+        <label>
+            ФИО:<br>
+            <input name="field-name-1" placeholder="Имя">
+        </label><br>
+        <label>
+            Телефон:<br>
+            <input name="field-tel" placeholder="+77777777777">
+        </label><br>
+        <label>
+            email:<br>
+            <input name="field-email" placeholder="test@gmail.com" type="email">
+        </label><br>
+
+        <label>
+            Дата рождения:<br>
+            <input name="field-date" placeholder="2000-01-01" type="date">
+        </label><br>
+
+        Пол:<br>
+        <label>
+            <input type="radio" checked="checked" name="radio-group-1" value="Мужчина">
+            Мужчина
+        </label><br>
+        <label>
+            <input type="radio" name="radio-group-1" value="Женщина">
+            Женщина
+        </label><br>
+        
+        Любимый язык программирования: <select>
+            <option value="">Java</option>
+            <option value="">C++</option>
+            <option value="">Pascal</option>
+            <option value="">C#</option>
+            <option value="">JavaScript</option>
+            <option value="">PHP</option>
+            <option value="">Python</option>
+            <option value="">Haskel</option>
+            <option value="">Clojure</option>
+            <option value="">Prolog</option>
+            <option value="">Scala</option>
+        </select>
+        
+        <p>Биография:</p>
+        <br />
+        <textarea name="Biography" rows="12" cols="30" placeholder="Напишите о себе"></textarea>
         <p>
             С контрактом ознакомлен:
             <input type="checkbox">
         </p>
-        <input type="button" value="Сохранить">
+        <input id="down" type="button" value="Сохранить">
     </form>
-</body>
+    </body>
 </html>
