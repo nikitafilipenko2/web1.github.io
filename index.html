@@ -62,33 +62,33 @@
     <form method="POST">
         <label>
             ФИО:<br>
-            <input name="field-name-1">
+            <input name="field-name-1" required pattern="^[a-zA-Zа-яА-Я]+$">
         </label><br>
         <label>
             Телефон:<br>
-            <input name="field-tel">
+            <input name="field-tel" required pattern="^[ 0-9]+$">
         </label><br>
         <label>
             email:<br>
-            <input name="field-email" type="email">
+            <input name="field-email" type="email" required>
         </label><br>
 
         <label>
             Дата рождения:<br>
-            <input name="field-date" type="date">
+            <input name="field-date" type="date" required>
         </label><br>
 
         Пол:<br>
         <label>
-            <input type="radio" checked="checked" name="radio-group-1" value="Мужчина">
+            <input type="radio" checked="checked" name="radio-group-1" value="Мужчина" required>
             Мужчина
         </label><br>
         <label>
-            <input type="radio" name="radio-group-1" value="Женщина">
+            <input type="radio" name="radio-group-1" value="Женщина"  required>
             Женщина
         </label><br>
 
-        Любимый язык программирования: <select>
+        Любимый язык программирования: <select  required>
             <option value="">Java</option>
             <option value="">C++</option>
             <option value="">Pascal</option>
@@ -104,10 +104,10 @@
 
         <p>Биография:</p>
         <br>
-        <textarea name="Biography" rows="12" cols="30" placeholder="Напишите о себе"></textarea>
+        <textarea name="Biography" rows="12" cols="30" placeholder="Напишите о себе"  required></textarea>
         <p>
             С контрактом ознакомлен:
-            <input type="checkbox">
+            <input type="checkbox"  required>
         </p>
         <input id="down" type="submit" value="Сохранить">
     </form>
